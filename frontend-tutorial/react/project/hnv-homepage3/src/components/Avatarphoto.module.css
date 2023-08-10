@@ -1,0 +1,22 @@
+.Image {
+    width: 800px;
+    margin-bottom: 10px;
+}
+
+.Text {
+    margin-top: 10px;
+}
+
+.TextBox {
+    text-align: center;
+}
+
+.ImageWrapper {
+    text-align: center;
+}
+
+/* .TextBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */

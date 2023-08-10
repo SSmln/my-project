@@ -1,0 +1,22 @@
+.Image {
+    width: 120px;
+    border-radius: 70%;
+    margin-bottom: 10px;
+}
+
+.Text {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.ImageWrapper {
+    text-align: center;
+}
+
+.TextWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

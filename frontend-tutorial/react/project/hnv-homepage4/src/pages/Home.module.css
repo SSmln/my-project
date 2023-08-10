@@ -1,0 +1,22 @@
+.slider-container {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slide {
+    flex: 0 0 33.33%; /* 이미지 컨테이너의 너비를 1/3로 설정 */
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .active {
+    transform: scale(1.1); /* 활성화된 슬라이드의 크기를 조정 */
+  }
+  
+
+.mainscreen{
+  
+
+}
