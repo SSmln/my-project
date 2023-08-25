@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Papers.module.css';
 
-const Papers = () => {
+function Papers() {
   const papers = [
     {
       id: 1,
@@ -57,14 +57,14 @@ const Papers = () => {
   return (
     <div className={styles.container}>
       <h2 className={styles.articleTitle}>Article</h2>
-      {papers.map(paper => (
+      {papers.map((paper) => (
         <div className={styles.paper} key={paper.id}>
           <div className={styles.year}>{paper.year}</div>
           <div className={styles.paperContent}>
             <h3 className={styles.title}>
               <a href={paper.url} target="_blank" rel="noopener noreferrer" className={styles.link}>
                 {paper.title}
-                <span className={styles.underline}></span>
+                <span className={styles.underline} />
               </a>
             </h3>
             <div className={styles.info}>
@@ -76,6 +76,6 @@ const Papers = () => {
       ))}
     </div>
   );
-};
+}
 
 export default Papers;

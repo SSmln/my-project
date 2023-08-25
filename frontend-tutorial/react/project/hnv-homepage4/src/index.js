@@ -1,21 +1,17 @@
-import App from './App';
+/* eslint-disable no-undef */
 import React from 'react';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, HashRouter, Router} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
+import reportWebVitals from './reportWebVitals';
+import App from './App';
 
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <App />
-  </BrowserRouter>
-</React.StrictMode>,
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>,
 );
 
-
-
 reportWebVitals();
-
-

@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 
 const img = '/img/contact.png';
 
-function Modal({ className, onClose, maskClosable, closable, visible }) {
+function Modal({
+  className, onClose, maskClosable, closable, visible,
+}) {
   const onMaskClick = (e) => {
     if (e.target === e.currentTarget) {
       onClose(e);
@@ -48,7 +50,7 @@ function Modal({ className, onClose, maskClosable, closable, visible }) {
         <ModalInner tabIndex="0" className="modal-inner">
           <ModalInner2>
             <ImgStyle>
-              <a href="http://www.syu.ac.kr/" rel="noopener noreferrer" target={'_blank'} cursor="pointer">
+              <a href="http://www.syu.ac.kr/" rel="noopener noreferrer" target="_blank" cursor="pointer">
                 <EnlargedImage src={img} alt="" />
               </a>
             </ImgStyle>
@@ -108,7 +110,7 @@ const ModalWrapper = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1000;
+
   overflow: auto;
   outline: 0;
 `;
@@ -122,7 +124,7 @@ const ModalOverlay = styled.div`
   bottom: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 999;
+
 `;
 
 const ModalInner = styled.div`
