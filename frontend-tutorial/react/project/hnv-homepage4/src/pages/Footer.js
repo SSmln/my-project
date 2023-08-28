@@ -9,9 +9,10 @@ const Footer__class = styled.div`
   padding: .75rem 1.25rem;
   background-color: rgba(0,0,0,.03);
   border-top: 1px solid rgba(0,0,0,.125);
-  position : bottom;
+  position : fixed;
   bottom : 0;
-  z-index: 1;
+  z-index: 2;
+  clear:both;
   `;
 
 function Footer() {
@@ -27,21 +28,3 @@ function Footer() {
 }
 
 export default Footer;
-
-// footer module css
-
-// .Footer {
-//   display: block;
-//   font-size: 80%;
-//   color: #6c757d
-// }
-
-// .Footer {
-//   padding: .75rem 1.25rem;
-//   background-color: rgba(0,0,0,.03);
-//   border-top: 1px solid rgba(0,0,0,.125)
-// }
-
-// /* .Footer {
-//   text-align: left;
-// } */

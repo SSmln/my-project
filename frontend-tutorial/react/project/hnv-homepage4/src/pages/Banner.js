@@ -1,20 +1,24 @@
 import React from 'react'
-import mainscreen from './image/univ.jpg'
 import styled from '@emotion/styled';
+const BannerCss = styled.div`
+background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+position: sticky;
+/* height: 300px; */
+width : 100%;
+border:none;
+background-size: cover;
+height: 100vh;
+z-index: -1;  
+  `;
 
-const Mainscreen = styled.img`
-position: absolute; top:0; left: 0;
-width: 100%;
-height: 100%;
 
-`;
-const Banner = () => {
+function Banner() {
   return (
     <div>
-        <Mainscreen src={mainscreen} alt="" />
+      <BannerCss>asdf</BannerCss>
 
     </div>
   )
 }
 
-export default Banner
+export default Banner;
