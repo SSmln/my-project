@@ -1,64 +1,81 @@
-import React from 'react'
-import '../index.css'
-import { Link } from 'react-router-dom';
+import React from "react";
+import "../index.css";
+import { Link } from "react-router-dom";
 
 export const Menuitems = [
   {
     id: "1",
-    title: 'Member',
-    url: '/member',
-    cName: 'nav-links',
-   
+    title: "Member",
+    url: "/member",
+    cName: "nav-links",
   },
-  { 
+  {
     id: "2",
-    title: 'Publication',
-    url: '/Publication',
-    cName: 'nav-links',
-
+    title: "Publication",
+    url: "/Publication",
+    cName: "nav-links",
   },
   {
     id: "3",
-    title: 'Projects',
-    url: '/Projects',
-    cName: 'nav-links',
+    title: "Projects",
+    url: "/Projects",
+    cName: "nav-links",
   },
   {
     id: "4",
-    title: 'Contact us',
-    url: '/contact',
-    cName: 'nav-links',
+    title: "Contact us",
+    url: "/contact",
+    cName: "nav-links",
   },
 ];
+// async function logJSONData() {
+//   const response = await fetch("http://210.94.242.37:8080/user_info/read");
+//   const jsonData = await response.json();
+//   console.log(jsonData);
+//   return jsonData;
+// }
 
 function MenuitemsList(props) {
   return Menuitems.map((item) => {
-      return <a key={item.id} href={item.url}>
+    return (
+      <a key={item.id} href={item.url}>
         {item.title}
-      </a>   
-      
- });
+      </a>
+    );
+  });
 }
 
+function ClickedMenuitemOn(item) {
+  return Menuitems.map((item) => {
+    if (window.location.pathname === item.url)
+      return (
+        <a className=" text-black" key={item.id}>
+          {item.title}
+        </a>
+      );
+  });
+}
 
 const Navbar = () => {
   return (
-  <div className='bg-gray-500 h-36 flex justify-center'>
-    <div className="width-full h-28 bg-black flex justify-center">
-      <div to="/"className="flex space-x-72 bg-purple-100 items-center ">
-       <Link to = "/">
-        <img className="cursor-pointer" src='/img/logo.png' />    
-       </Link>
-        <div className=''>
-          <a className="flex list-none menu_items space-x-9 cursor-pointer text-sky-400/100" >
+    <nav className="">
+      <div className="absolute w-[1920px] top-0  h-[375px] bg-gray-400 z-2">
+        <div className="flex space-x-[1380px] h-[100px] text-black items-center">
+          <div className="">
+            <Link to="/" className=" font-[arial] ml-[40px] text-3xl ">
+              CEMI
+            </Link>
+          </div>
+          <div className="list-none space-x-[20px] cursor-pointer ">
             {MenuitemsList()}
-          </a>
+          </div>
+        </div>
+        <div className=" w-[400px] m-auto h-[200px] bg-gray-200 text-center left-[40%] top-[50%] text-3xl ">
+          {ClickedMenuitemOn()}
         </div>
       </div>
-    </div>
-  </div>
-  )
-}
+    </nav>
+  );
+};
 
-export default Navbar
-
+export default Navbar;
