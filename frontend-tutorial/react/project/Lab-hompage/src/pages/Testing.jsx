@@ -1,140 +1,57 @@
 import React from "react";
-import "../index.css";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import { useEffect } from "react";
-export const Menuitems = [
-  {
-    id: "1",
-    title: "Member",
-    url: "/member",
-    cName: "nav-links",
-  },
-  {
-    id: "2",
-    title: "Publication",
-    url: "/Publication",
-    cName: "nav-links",
-  },
-  {
-    id: "3",
-    title: "Projects",
-    url: "/Projects",
-    cName: "nav-links",
-  },
-  {
-    id: "4",
-    title: "Contact us",
-    url: "/contact",
-    cName: "nav-links",
-  },
-];
-// async function logJSONData() {
-//   const response = await fetch("http://210.94.242.37:8080/user_info/read");
-//   const jsonData = await response.json();
-//   console.log(jsonData);
-//   return jsonData;
-// }
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { Component } from "react";
 
-function MenuitemsList(props) {
-  return Menuitems.map((item) => {
+export default class SimpleSlider extends Component {
+  render() {
+    window.onload = function () {
+      $(".slider").slick({
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"></button>',
+        centerMode: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      });
+    };
+
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    };
     return (
-      <a key={item.id} href={item.url}>
-        {item.title}
-      </a>
-    );
-  });
-}
-
-function ClickedMenuitemOn(item) {
-  return Menuitems.map((item) => {
-    if (window.location.pathname === item.url)
-      return (
-        <a className=" text-black  " key={item.id}>
-          {item.title}
-        </a>
-      );
-  });
-}
-
-const Testing = () => {
-  return (
-    <nav>
-      <div className="absolute w-[1920px] top-0  h-[375px]  z-2">
-        <div className="flex space-x-[1380px] h-[100px] text-black items-center">
-          <div className="">
-            <Link to="/" className=" font-[arial] ml-[40px] text-3xl ">
-              CEMI
-            </Link>
+      <div>
+        <Slider className="z-[1]" {...settings}>
+          <div>
+            <img
+              className="w-full h-full overflow-hidden opacity-[0.8]"
+              src="/img/slider1.jpeg "
+              alt=""
+            />
           </div>
-          <div className="list-none space-x-[20px] cursor-pointer ">
-            {MenuitemsList()}
+          <div>
+            <img
+              className="w-full h-full overflow-hidden opacity-[0.8]"
+              src="/img/slider3.jpeg"
+              alt=""
+            />
           </div>
-        </div>
-        <div className=" absolute left-[48%] top-[50%] text-3xl ">
-          {ClickedMenuitemOn()}
-        </div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
-        <div className="text-3xl">asd</div>
+          <div>
+            <img
+              className="w-full h-[828.46px] overflow-hidden opacity-[0.8]"
+              src="/img/slider6.jpeg"
+              alt=""
+            />
+          </div>
+        </Slider>
       </div>
-    </nav>
-  );
-};
-
-export default Testing;
+    );
+  }
+}

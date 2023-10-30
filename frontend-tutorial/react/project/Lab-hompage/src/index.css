@@ -9,9 +9,30 @@
   src: url("./font/FontsFree-Net-arial-bold.ttf");
 }
 
+@media only screen and(min-device-width:320px) and (max-device-width: 480px) {
+}
+
 :root {
   transition: all var(--animation-duration) ease-in;
 }
-.body {
-  margin: 0 100px;
+body {
+  margin: auto;
+  /* width: 70%; */
+  /* 나중에 색 수정 */
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+}
+
+.nav-menu {
+  color: white;
+}
+.nav-menu :after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #f1c40f;
+
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+}
+.nav-menu :hover:after {
+  transform: scaleX(1);
 }

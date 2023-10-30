@@ -4,14 +4,20 @@ import { Link } from "react-router-dom";
 
 export const Menuitems = [
   {
+    id: "0",
+    title: "About",
+    url: "/Home",
+    cName: "nav-links",
+  },
+  {
     id: "1",
-    title: "Member",
-    url: "/member",
+    title: "Members",
+    url: "/Member",
     cName: "nav-links",
   },
   {
     id: "2",
-    title: "Publication",
+    title: "Publications",
     url: "/Publication",
     cName: "nav-links",
   },
@@ -23,8 +29,8 @@ export const Menuitems = [
   },
   {
     id: "4",
-    title: "Contact us",
-    url: "/contact",
+    title: "Solutions",
+    url: "/Contact",
     cName: "nav-links",
   },
 ];
@@ -59,7 +65,7 @@ function ClickedMenuitemOn(item) {
 const Navbar = () => {
   return (
     <nav className="">
-      <div className="absolute w-[1920px] top-0  h-[375px] bg-gray-400 z-2">
+      <div className="absolute w-[1920px] top-0  h-[375px] bg-gray-400 z-[2]">
         <div className="flex space-x-[1380px] h-[100px] text-black items-center">
           <div className="">
             <Link to="/" className=" font-[arial] ml-[40px] text-3xl ">
@@ -78,4 +84,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default { Navbar, Menuitems };

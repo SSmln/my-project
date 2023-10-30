@@ -1,4 +1,7 @@
 import React from "react";
+import SubNavbar from "./SubNavbar";
+import Baner from "./Baner";
+import ExampleComponent from "../ProjectCard";
 
 const papers = [
   {
@@ -65,31 +68,42 @@ const papers = [
   },
 ];
 
-function paper() {
-  return papers.map((item) => {
-    return (
-      <div key={item.id}>
-        <div className=" h-[515px] mt-[40px] border-4  ">
-          <div className="w-[620px] h-[283px] ">
-            <img src="img/hun.jpg" alt="" className="h-[100%] overflow   " />
-            <div className="  m-[35px]">
-              <li className="">asd</li>
-              <br />
-              <h4>azxczxc</h4>
-              <p>zxnmcjncjk</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  });
-}
+// function paper() {
+//   return papers.map((item) => {
+//     return (
+//       <div key={item.id}>
+//         <div className="h-auto  border-4 hover:scale-105 duration-300 bg-white ">
+//           <div className="mx-10 h-auto  ">
+//             <img src="img/hun.jpg" alt="" className="h-[100%]  " />
+//             <div className=" w-auto m-[35px]">
+//               <h1 className="">asd</h1>
+//               <br />
+//               <h4>azxczxc</h4>
+//               <p>zxnmcjncjk</p>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     );
+//   });
+// }
 
 const Projects = () => {
+  const baner = {
+    name: "Projects",
+  };
   return (
-    <div class="grid grid-cols-3 gap-40 border-5 items-stretch mt-[400px]">
-      {paper()}
-    </div>
+    <>
+      <Baner name={baner.name} />
+      <div className="grid grid-cols-3 w-[100%] border-none items-stretch">
+        {/* <SubNavbar/> */}
+        {/* {paper()} */}
+        <ExampleComponent />
+        <ExampleComponent />
+        <ExampleComponent />
+        <ExampleComponent />
+      </div>
+    </>
   );
 };
 
