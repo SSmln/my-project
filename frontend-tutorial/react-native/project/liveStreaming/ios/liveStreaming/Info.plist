@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>VideoStreaming</string>
+	<string>liveStreaming</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -52,10 +52,10 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>NSCameraUsageDescription</key>
-<string>$(VideoStreaming) needs access to your Camera.</string>
+<string>$(PRODUCT_NAME) needs access to your Camera.</string>
 
 <!-- optionally, if you want to record audio: -->
 <key>NSMicrophoneUsageDescription</key>
-<string>$(VideoStreaming) needs access to your Microphone.</string>
+<string>$(PRODUCT_NAME) needs access to your Microphone.</string>
 </dict>
 </plist>
